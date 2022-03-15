@@ -10,11 +10,11 @@ const Home = () => {
   
   const handleClick = () => {
     setToggle(!toggle);
-    if(toggle){
-        return <Modal toggle={toggle} />
-    } else {
-        return;
-    }
+    // if(toggle){
+    //     return <Modal toggle={toggle} />
+    // } else {
+    //     return;
+    // }
   }
 
   return (
@@ -24,7 +24,10 @@ const Home = () => {
             onClick={handleClick}
         >
             Whats up!
-        </button>        
+        </button>  
+        {
+          toggle ? <Modal toggle={toggle} /> : ''
+        }      
     </div>
   )
 }
